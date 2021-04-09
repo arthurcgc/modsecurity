@@ -14,7 +14,7 @@ on:
   pull_request:
 
 env:
-  IMAGE_NAME: waf-modsecurity
+  IMAGE_NAME: modsecurity
 
 jobs:
   # Run tests.
