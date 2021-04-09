@@ -1,13 +1,14 @@
 # README
 
-Simple Dockerfile repository to keep track of: <https://hub.docker.com/repository/docker/arthurcgc/waf-modsecurity>
-This Docker Image is intended to work alongside project: <https://github.com/arthurcgc/WAF> which imports this image as the base image of all nginx resources created
+Simple Dockerfile repository to keep track of: <https://hub.docker.com/repository/docker/arthurcgc/modsecurity>
+This Docker Image is intended to work alongside project: <https://github.com/arthurcgc/waf-operator> which imports this image as the base image for all nginx resources created
 
 ## Why does this image exist?
 
 This image expands owasp/modsecurity:nginx adding curl which is required while working with: <https://github.com/tsuru/nginx-operator>
 The only other addition is the Core Rule Set(CRS) from <https://coreruleset.org/installation/> that is mounted inside the container at: ```/usr/local/waf-conf```
-Alongside the set of rules from CRS two other configuration files are mounted: ```crs-setup.conf``` and ```modsecurity-recommended.conf```
+Two configuration files are mounted: ```crs-setup.conf``` and ```modsecurity-recommended.conf```
+As of the latest version of the project <https://github.com/tsuru/nginx-operator> the CRS is now mounted as a ConfigMap in Kubernetes
 
 ### About the configuration files
 
