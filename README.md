@@ -5,7 +5,7 @@ This Docker Image is intended to work alongside project: <https://github.com/art
 
 ## Why does this image exist?
 
-This image expands owasp/modsecurity:nginx adding curl which is required to work with: <https://github.com/tsuru/nginx-operator>  
+This image expands owasp/modsecurity:nginx adding *curl* which is required to work with: <https://github.com/tsuru/nginx-operator>  
 The only other addition is the Core Rule Set(CRS) from [here](https://coreruleset.org/installation/) that is mounted inside the container at: ```/usr/local/waf-conf```  
 **IMPORTANT**: As of the latest version of the project <https://github.com/arthurcgc/waf-operator> the CRS is now mounted as a ConfigMap in Kubernetes  
 Two configuration files are mounted: ```crs-setup.conf``` and ```modsecurity-recommended.conf```
