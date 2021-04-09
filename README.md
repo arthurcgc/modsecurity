@@ -5,9 +5,9 @@ This Docker Image is intended to work alongside project: <https://github.com/art
 
 ## Why does this image exist?
 
-This image expands owasp/modsecurity:nginx adding curl which is required while working with: <https://github.com/tsuru/nginx-operator>
-The only other addition is the Core Rule Set(CRS) from <https://coreruleset.org/installation/> that is mounted inside the container at: ```/usr/local/waf-conf```
-*Important*: As of the latest version of the project <https://github.com/tsuru/nginx-operator> the CRS is now mounted as a ConfigMap in Kubernetes
+This image expands owasp/modsecurity:nginx adding curl which is required while working with: <https://github.com/tsuru/nginx-operator>  
+The only other addition is the Core Rule Set(CRS) from <https://coreruleset.org/installation/> that is mounted inside the container at: ```/usr/local/waf-conf```  
+*Important*: As of the latest version of the project <https://github.com/tsuru/nginx-operator> the CRS is now mounted as a ConfigMap in Kubernetes  
 Two configuration files are mounted: ```crs-setup.conf``` and ```modsecurity-recommended.conf```
 
 ### About the configuration files
