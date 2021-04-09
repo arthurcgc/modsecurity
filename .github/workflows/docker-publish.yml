@@ -64,7 +64,7 @@ jobs:
           # Use Docker `latest` tag convention
           [ "$VERSION" == "master" ] && VERSION=latest
 
-          TAG = $REPO_NAME/$IMAGE_NAME
+          TAG=$REPO_NAME/$IMAGE_NAME
 
           echo VERSION=$VERSION
           echo REPO_NAME=$REPO_NAME
