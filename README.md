@@ -7,8 +7,8 @@ This Docker Image is intended to work alongside project: <https://github.com/art
 
 This image expands owasp/modsecurity:nginx adding curl which is required while working with: <https://github.com/tsuru/nginx-operator>
 The only other addition is the Core Rule Set(CRS) from <https://coreruleset.org/installation/> that is mounted inside the container at: ```/usr/local/waf-conf```
+*Important*: As of the latest version of the project <https://github.com/tsuru/nginx-operator> the CRS is now mounted as a ConfigMap in Kubernetes
 Two configuration files are mounted: ```crs-setup.conf``` and ```modsecurity-recommended.conf```
-As of the latest version of the project <https://github.com/tsuru/nginx-operator> the CRS is now mounted as a ConfigMap in Kubernetes
 
 ### About the configuration files
 
@@ -17,7 +17,7 @@ As of the latest version of the project <https://github.com/tsuru/nginx-operator
 
 * crs-setup.conf
     The configuration directives/settings in this file are used to control the OWASP ModSecurity CRS.
-    The CRS assumes that modsecurity.conf has been loaded. It is bundled with ModSecurity.
+    The CRS assumes that modsecurity-recommended.conf has been loaded. It is bundled with ModSecurity.
     The order of file inclusion in your webserver configuration should always be:
     1. modsecurity.conf
     2. crs-setup.conf (this file)
